@@ -11,7 +11,7 @@
     "build": "cd client && npm install && npm run build",
     "deploy": "start deploy.cmd",
     "test": "node server.js",
-    "start": "node server/server.js",
+    "start": "node server.js",
     "scss": "node-sass --watch views/style/sass/style.scss -o views/style/css/",
     "dev": "nodemon Server.js",
     "cloc": "cloc --fullpath --exclude-dir=node_modules --not-match-f=\"(node_modules|/views/require.js|package-lock.json)\" .",
