@@ -1,0 +1,51 @@
+<!-- flip card -->
+<div class="flip-card col-sm-4" style="width:50%;">
+    <div class="front">
+        <h1 class="display-4">Title</h1>
+    </div>
+    <div class="back">
+        <div>
+            <!-- back side -->
+        </div>
+    </div>
+</div>
+<!-- filp card -->
+
+
+
+<!-- client cards -->
+<div class="mb-3 flip-card col-sm-3" onmouseover="this.style.zIndex = 1002" zindex="`+(1000-i)+`"
+    onmouseout="this.style.zIndex = this.getAttribute('zindex');"
+    style="z-index: `+ (1000-i) + `; margin-bottom: auto; -webkit-transform-style: preserve-3d;transform-style: preserve-3d;perspective: 2000px;-webkit-perspective: 2000px;overflow: visible; min-height: 41vh; ">
+    <div class="front"
+        style="transition: all 0.3s cubic-bezier(.56,.49,.83,.67);padding: 0; overflow:hidden;padding:5px;background: none; box-shadow: none;-webkit-transform-style: preserve-3d;transform-style: preserve-3d;perspective: 2000px;-webkit-perspective: 2000px;">
+        <div role="img" aria-label="Cannot get image."
+            style="height:100%;width: 100%; overflow: hidden; padding: 0; background-image: url(` + picture + `); -webkit-transform-style: preserve-3d; background-size: cover;background-position: center; ">
+            <h1 style="-webkit-transform: translateZ(100px);font-size: 2em; font-family: Prompt, sans-serif;" class="display-2 oppositeColor">`+
+                responseJson[i].Name+`</h1>
+        </div>
+    </div>
+    <div class="back"
+        style="transition: all 0.3s cubic-bezier(.56,.49,.83,.67);box-shadow: none; background: none; min-height:41vh; height:100%;width: 100%;  backface-visibility: hidden;">
+        <div>
+            <div style="border:0px; width: 100%; height:100%;" class="card mb-3 shadow-sm">
+                <div style="margin: 0px; padding : 0px; width: 100%; height:100%;" class="card">
+                    <div role="img" aria-label="Cannot get image."
+                        style="
+                        display: table;
+                        margin: 0 auto; width: 20vw; height:30vh;  overflow: hidden;  padding: 0; background-repeat: no-repeat; background-image: url(` + picture + `); background-size: contain;background-position:  center;">
+                        <a id="` + "Button" + i + `"
+                            style="width: 100%;height: 100%; background: none;border: none; color:white;"
+                            onclick="PopUp(event)" class="btn btn-primary"></a>
+                    </div>
+                    <div class="card-body" id="` + "Div" + i + `">
+                        <h5 class="card-title" id="` + "CardTitle" + i + `">` + responseJson[i].Name + `</h5>
+                        <p class="card-text">`+responseJson[i].Content1.substring(0,50) + `...` +`</p>
+                        <button type="button" id="` + "Button" + i + `"  onclick="PopUp(event)"
+                         class="btn btn-outline-secondary" translate>View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

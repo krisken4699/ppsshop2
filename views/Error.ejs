@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        setTimeout(() => {
+            Loading = false;
+        }, 1000);
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P P S H O P · ERROR <%= status %>
+    </title>
+    <link rel="icon" href="/logo">
+    <script src="/views/style/css.js"></script>
+
+    <style>
+        #undefind {
+            color: rgb(115, 115, 255);
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: rgb(40, 40, 40);
+            overflow: hidden;
+        }
+
+        p {
+            font-family: monospace;
+            font-size: 130px;
+            margin: 10vh 0 0;
+            text-align: center;
+            letter-spacing: 5px;
+            background-color: black;
+            color: transparent;
+            text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+        }
+
+        a span {
+            font-size: 1.2em;
+        }
+
+        code span {
+            color: #f0c674;
+        }
+
+        code i {
+            color: #b5bd68;
+        }
+
+        code em {
+            color: #b294bb;
+            font-style: unset;
+        }
+
+        code {
+            color: #bdbdbd;
+            text-align: center;
+            display: block;
+            font-size: 16px;
+            margin: 0 30px 25px;
+
+        }
+
+        code b {
+            color: #81a2be;
+            font-weight: 500;
+        }
+
+        a {
+            color: #8abeb7;
+            font-family: monospace;
+            font-size: 20px;
+            text-decoration: underline;
+            margin-top: 10px;
+            display: inline-block
+        }
+
+        @media screen and (max-width: 880px) {
+            p {
+                font-size: 14vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navigator bar -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: white;">
+        <a class="navbar-brand" style="font-size:xx-large;" href="/">PPSSHOP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/">Home</a>
+                <a class="nav-item nav-link" href="/login">Login</a>
+                <a class="nav-item nav-link" href="/register">Sign Up</a>
+                <a class="nav-item nav-link" href="/Contact">Contact</a>
+                <a class="nav-item nav-link" href="/problems">Developers' Tip</a>
+                <a class="nav-item nav-link active" style="font-weight:bolder;" href="#">Error <%= status %> </a>
+            </div>
+        </div>
+    </nav>
+    <!-- navigator bar -->
+
+    <p style="white-space: nowrap; overflow: hidden;">HTTP: <span id="statusCode">
+            <%= status %>
+        </span></p>
+    <code><span>response</span>.<em>status</em> == <%= status  %></code>
+    <div id="lines"> lines</div>
+    <code><span style="color: #b5bd68;" id="Url">//Cannot find</span></code>
+    <center><code><span>Return to </span><a href="/">HOME</a></code></center>
+    <center><code><span>(≥o≤)</span></code></center>
+    <script>
+        setTimeout(() => {
+
+            var e404 = ['<code><span>if</span> (<b>!page.exists</b>) {<span>try_again()</span>;}</code>',
+                '<code><span>else if (<b>page.exists && page != <b id="undefined">undefined</b></b>)</span> {<em>alert</em>(<i>"Internal Server Error"</i>); <span>window</span>.<em>location</em> = " / ";}</code>'
+            ]
+            var e401 = ['<code><span>if</span> (<b>response.status </b> == <i>401</i>) {<span>user.authenticate()</span>;}</code>',
+                '<code><span>else if (<b>user.isAdmin && Admin1 != <b id="undefined">undefined</b></b>)</span> {<em>alert</em>(<i>"Internal Server Error"</i>); <span>window</span>.<em>location</em> = " / ";}</code>'
+            ]
+            console.log(document.getElementById('statusCode').innerHTML);
+            if (document.getElementById('statusCode').innerText == "404") {
+                RunLines(e404);
+                type(0, 0);
+                type(1, 600);
+                type(2, 1300);
+                type(3, 3800);
+                type(4, 4800);
+                type(5, 7000);
+            }
+            if (document.getElementById('statusCode').innerText == "401") {
+                RunLines(e401);
+                type(0, 0);
+                type(1, 600);
+                type(2, 1300);
+                type(3, 3800);
+                type(4, 4800);
+                type(5, 7000);
+            }
+            function RunLines(statusCode) {
+                document.getElementById('lines').innerHTML = "";
+                statusCode.forEach(lines => {
+                    document.getElementById('lines').innerHTML += lines;
+                    console.log(lines);
+                });
+                document.getElementById('Url').innerHTML = "//Cannot find " + window.location.href;
+
+            }
+
+            function type(line, delay) {
+                var str = document.getElementsByTagName("code")[line].innerHTML.toString();
+                var i = 0;
+                document.getElementsByTagName("code")[line].innerHTML = "";
+
+                setTimeout(function () {
+                    var se = setInterval(function () {
+                        i++;
+                        document.getElementsByTagName("code")[line].innerHTML =
+                            str.slice(0, i) + "|";
+                        if (i == str.length) {
+                            clearInterval(se);
+                            document.getElementsByTagName("code")[line].innerHTML = str;
+                        }
+                    }, 10);
+                }, delay);
+            }
+
+        }, 100);
+    </script>
+
+
+</body>
+
+</html>

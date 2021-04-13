@@ -1,0 +1,101 @@
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* min-height: 100vh; */
+        height: 100%;
+        background: whitesmoke;
+    }
+
+    ul li:hover:before {
+        opacity: 0.1;
+        letter-spacing: 0px;
+    }
+
+    ul li:before {
+        content: attr(data-text);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 1000%;
+        font-weight: 700;
+        pointer-events: none;
+        opacity: 0;
+        letter-spacing: 20px;
+        transition: 0.3s;
+        white-space: nowrap;
+    }
+
+    ul {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    ul li {
+        list-style: none;
+    }
+
+    ul li a {
+        position: relative;
+        display: inline-block;
+        padding: 6px, 15px;
+        text-decoration: none;
+        background: #80c904;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        overflow: hidden;
+        transition: 0.3s;
+        z-index: 1;
+    }
+
+    ul li a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100px;
+        width: 80px;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+        transform: skewX(35deg);
+        transition: 0s;
+    }
+
+    ul:hover li a {
+        opacity: 0;
+    }
+
+    ul li a:hover {
+        transform: scale(1.4);
+        z-index: 1000;
+        background: #E4701E;
+        opacity: 1;
+        color: white;
+        text-decoration: none;
+    }
+
+    ul li a:hover:before {
+        left: calc(100% + 100px);
+        transition: 0.5s;
+        transition-delay: 0.2s;
+    }
+</style>
+
+<div style="display: flex; justify-content: center; align-items: center;  background-color: #0d0f1b; height: 50%;">
+    <ul>
+        <li data-text="Register"><a href="/register">Register</a></li>
+        <li data-text="Login"><a href="/login">Login</a></li>
+        <li data-text="About"><a href="/#">About</a></li>
+        <li data-text="Contact"><a href="#">Contact</a></li>
+    </ul>
+</div>

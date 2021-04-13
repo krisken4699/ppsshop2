@@ -1,0 +1,40 @@
+{"User":"Admin","StockingID":1613800425677,"Gender":"","Size":"","Quantity":"2","Quantity2":29994,"Mode":"Subtract","Name":"Laundry Bag","ProductID":"1613656380963","Product__Price":400,"Content":"buy","Date":20,"Day":6,"Month":2,"Year":2021,"Hour":12,"Minute":53,"_id":"2lYAdy5VW0eFQz3u"}
+{"User":"Admin","StockingID":1613750057561,"Gender":"Female","Size":"S","Quantity":"1","Quantity2":19999,"Mode":"Subtract","Name":"Dhamma Skirt","ProductID":"1613656282510","Product__Price":400,"Content":"buy","Date":19,"Day":5,"Month":2,"Year":2021,"Hour":22,"Minute":54,"_id":"8TpINPODUTWCPPy1"}
+{"User":"Admin","StockingID":1614420355392,"Gender":"Male","Size":"S","Quantity":"1","Quantity2":19998,"Mode":"Subtract","Name":"Formal Shirt","ProductID":"1613656065211","Product__Price":400,"Content":"buy","Date":28,"Day":0,"Month":2,"Year":2021,"Hour":0,"Minute":5,"_id":"8aKelY4KANHFiGmh"}
+{"User":"Admin","StockingID":1613819224767,"Gender":"Male","Size":"S","Quantity":"1","Quantity2":22344,"Mode":"Subtract","Name":"Dhamma Pants","ProductID":"1613656234171","Product__Price":400,"Content":"buy","Date":20,"Day":6,"Month":2,"Year":2021,"Hour":18,"Minute":7,"_id":"8obDbivxVj5DpSwB"}
+{"User":"Admin","StockingID":1614420355392,"Gender":"Male","Size":"S","Quantity":"1","Quantity2":19999,"Mode":"Subtract","Name":"Formal Shirt","ProductID":"1613656065211","Product__Price":400,"Content":"buy","Date":28,"Day":0,"Month":2,"Year":2021,"Hour":0,"Minute":5,"_id":"9kQvbQFwxmYDPHhw"}
+{"User":"Admin","StockingID":1613800425677,"Gender":"Female","Size":"L","Quantity":"2","Quantity2":14998,"Mode":"Subtract","Name":"Student Shirt","ProductID":"1613656086505","Product__Price":400,"Content":"buy","Date":20,"Day":6,"Month":2,"Year":2021,"Hour":12,"Minute":53,"_id":"Ae6svU6UgtkdJwlU"}
+{"User":"Admin","StockingID":1614486364382,"Gender":"Male","Size":"L","Quantity":"3","Quantity2":14997,"Mode":"Subtract","Name":"Student Shirt","ProductID":"1613656086505","Product__Price":400,"Content":"buy","Date":28,"Day":0,"Month":2,"Year":2021,"Hour":18,"Minute":26,"_id":"BaiWS4SG0HVGNWGZ"}
+{"User":"Admin","StockingID":1613797105000,"Gender":"Female","Size":"S","Quantity":"1","Quantity2":19998,"Mode":"Subtract","Name":"Dhamma Skirt","ProductID":"1613656282510","Product__Price":400,"Content":"buy","Date":20,"Day":6,"Month":2,"Year":2021,"Hour":11,"Minute":58,"_id":"JOE26ECBjHOGsWoP"}
+{"User":"Admin","StockingID":1613797105000,"Gender":"Female","Size":"S","Quantity":"1","Quantity2":14999,"Mode":"Subtract","Name":"P.E. Shirt","ProductID":"1613656162364","Product__Price":400,"Content":"buy","Date":20,"Day":6,"Month":2,"Year":2021,"Hour":11,"Minute":58,"_id":"Jq2dnHg6FofAT5Rz"}
+{"User":"Admin","StockingID":1614487533560,"Gender":"Male","Size":"L","Quantity":"1","Quantity2":19999,"Mode":"Subtract","Name":"Formal Shirt","ProductID":"1613656065211","Product__Price":400,"Content":"buy","Date":28,"Day":0,"Month":2,"Year":2021,"Hour":18,"Minute":45,"_id":"QkRMT6SlPYgRFeGl"}
+{"User":"Admin","StockingID":1613801491675,"Gender":"Female","Size":"XL","Quantity":"1","Quantity2":19999,"Mode":"Subtract","Name":"Dhamma Skirt","ProductID":"1613656282510","Product__Price":400,"Content":"buy","Date":20,"Day":6,"Month":2,"Year":2021,"Hour":13,"Minute":11,"_id":"REkAfDQXtwXrzuAH"}
+{"User":"Admin","StockingID":1613790378469,"Gender":"Female","Size":"M","Quantity":"1","Quantity2":19999,"Mode":"Subtract","Name":"Dhamma Skirt","ProductID":"1613656282510","Product__Price":400,"Content":"buy","Date":20,"Day":6,"Month":2,"Year":2021,"Hour":10,"Minute":6,"_id":"VqDWGlZ1sc4GAwmh"}
+{"User":"Admin","StockingID":1613797980490,"Gender":"Male","Size":"M","Quantity":"1","Quantity2":14999,"Mode":"Subtract","Name":"Student Shirt","ProductID":"1613656086505","Product__Price":400,"Content":"buy","Date":20,"Day":6,"Month":2,"Year":2021,"Hour":12,"Minute":13,"_id":"VvyRHvaQ42kFYPty"}
+{"User":"Admin","StockingID":1613795141537,"Gender":"","Size":"","Quantity":"1","Quantity2":29996,"Mode":"Subtract","Name":"Laundry Bag","ProductID":"1613656380963","Product__Price":400,"Content":"buy","Date":20,"Day":6,"Month":2,"Year":2021,"Hour":11,"Minute":25,"_id":"ZGuG5evjPL37fyxB"}
+{"User":"Admin","StockingID":1613801491675,"Gender":"Male","Size":"L","Quantity":"1","Quantity2":19999,"Mode":"Subtract","Name":"Dhamma Pants","ProductID":"1613656234171","Product__Price":400,"Content":"buy","Date":20,"Day":6,"Month":2,"Year":2021,"Hour":13,"Minute":11,"_id":"ZbABZjygcycp62J0"}
+{"User":"Admin","StockingID":1614072812475,"Gender":"Female","Size":"20","Quantity":"1","Quantity2":11991,"Mode":"Subtract","Name":"Brown Skirt","ProductID":"1613656118540","Product__Price":400,"Content":"buy","Date":23,"Day":2,"Month":2,"Year":2021,"Hour":16,"Minute":33,"_id":"jlffyHirZc4pCFDC"}
+{"User":"Admin","StockingID":1614484337251,"Gender":"","Size":"","Quantity":"1","Quantity2":19978,"Mode":"Subtract","Name":"Note Books (Big)","ProductID":"1613656442642","Product__Price":400,"Content":"buy","Date":28,"Day":0,"Month":2,"Year":2021,"Hour":17,"Minute":52,"_id":"kBqSj4UEigq7up03"}
+{"User":"Admin","StockingID":1613790378469,"Gender":"Male","Size":"M","Quantity":"1","Quantity2":19999,"Mode":"Subtract","Name":"Dhamma Pants","ProductID":"1613656234171","Product__Price":400,"Content":"buy","Date":20,"Day":6,"Month":2,"Year":2021,"Hour":10,"Minute":6,"_id":"oeKAoH5N1VJR8qxU"}
+{"User":"Admin","StockingID":1613802534798,"Gender":"Female","Size":"20","Quantity":"1","Quantity2":11992,"Mode":"Subtract","Name":"Brown Skirt","ProductID":"1613656118540","Product__Price":400,"Content":"buy","Date":20,"Day":6,"Month":2,"Year":2021,"Hour":13,"Minute":28,"_id":"rV4kNM4x2R6ofchQ"}
+{"User":"Admin","StockingID":1613802534798,"Gender":"Female","Size":"20","Quantity":"1","Quantity2":11993,"Mode":"Subtract","Name":"Brown Skirt","ProductID":"1613656118540","Product__Price":400,"Content":"buy","Date":20,"Day":6,"Month":2,"Year":2021,"Hour":13,"Minute":28,"_id":"thy7NMyI1csbk0wK"}
+{"$$deleted":true,"_id":"2lYAdy5VW0eFQz3u"}
+{"$$deleted":true,"_id":"8TpINPODUTWCPPy1"}
+{"$$deleted":true,"_id":"8aKelY4KANHFiGmh"}
+{"$$deleted":true,"_id":"8obDbivxVj5DpSwB"}
+{"$$deleted":true,"_id":"9kQvbQFwxmYDPHhw"}
+{"$$deleted":true,"_id":"Ae6svU6UgtkdJwlU"}
+{"$$deleted":true,"_id":"BaiWS4SG0HVGNWGZ"}
+{"$$deleted":true,"_id":"JOE26ECBjHOGsWoP"}
+{"$$deleted":true,"_id":"Jq2dnHg6FofAT5Rz"}
+{"$$deleted":true,"_id":"QkRMT6SlPYgRFeGl"}
+{"$$deleted":true,"_id":"REkAfDQXtwXrzuAH"}
+{"$$deleted":true,"_id":"VqDWGlZ1sc4GAwmh"}
+{"$$deleted":true,"_id":"VvyRHvaQ42kFYPty"}
+{"$$deleted":true,"_id":"ZGuG5evjPL37fyxB"}
+{"$$deleted":true,"_id":"ZbABZjygcycp62J0"}
+{"$$deleted":true,"_id":"jlffyHirZc4pCFDC"}
+{"$$deleted":true,"_id":"kBqSj4UEigq7up03"}
+{"$$deleted":true,"_id":"oeKAoH5N1VJR8qxU"}
+{"$$deleted":true,"_id":"rV4kNM4x2R6ofchQ"}
+{"$$deleted":true,"_id":"thy7NMyI1csbk0wK"}

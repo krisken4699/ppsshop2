@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@700&display=swap');
+
+html {
+  animation: transitionOut 2s;
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.dropdown-menu a {
+  font-weight: 400;
+}
+
+.field-icon {
+  font-size: medium;
+  float: right;
+  transform: translateX(-10px);
+  margin-left: -30px;
+  margin-top: -26px;
+  position: relative;
+  z-index: 2;
+  color: grey;
+}
+
+.field-icon:hover {
+  color: black;
+}
+
+@keyframes transitionOut {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translate(-20px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0px);
+    transform: rotate(0);
+  }
+}
+
+@keyframes transitionIn {
+  to {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translate(-20px);
+  }
+
+  from {
+    opacity: 1;
+    filter: blur(0px);
+    transform: rotate(0);
+  }
+}
+
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/*Social Icons*/
+
+.social-icons {
+  padding: 0;
+  list-style: none;
+  margin: 1em;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin: 0.15em;
+  position: relative;
+  font-size: 1em;
+}
+
+.social-icons i {
+  color: #fff;
+  position: absolute;
+  top: 0.95em;
+  left: 0.96em;
+  transition: all 265ms ease-out;
+}
+
+.social-icons a {
+  display: inline-block;
+}
+
+.social-icons a:before {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  content: " ";
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  display: block;
+  background: linear-gradient(45deg, #0f0, rgb(32, 211, 32));
+  transition: all 265ms ease-out;
+}
+
+.social-icons a:hover:before {
+  transform: scale(0);
+  transition: all 265ms ease-in;
+}
+
+.social-icons a:hover i {
+  transform: scale(2.2);
+  -ms-transform: scale(2.2);
+  -webkit-transform: scale(2.2);
+  color: #ff003c;
+  text-shadow: 0 0px 30px #f18437;
+  background: -webkit-linear-gradient(45deg, gold, #e4701e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 265ms ease-in;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  font-size: 1.2em;
+}
+
+/* Disable Selection */
+
+*:focus {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+i:focus {
+  outline: none;
+}
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+input {
+  -webkit-user-select: text;
+}
+
+/* @keyframes jump{
+  0%{
+    transform: translateY(00px);
+  }
+  50%{
+    transform: translateY(30px);
+  }
+} */

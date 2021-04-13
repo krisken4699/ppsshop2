@@ -1,0 +1,50 @@
+{
+  "name": "ppshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Server.js",
+  "engines": {
+    "node": "14.15.1"
+  },
+  "scripts": {
+    "heroku-postbuild": "npm install",
+    "build": "cd client && npm install && npm run build",
+    "deploy": "start deploy.cmd",
+    "test": "node server.js",
+    "start": "node server/server.js",
+    "scss": "node-sass --watch views/style/sass/style.scss -o views/style/css/",
+    "dev": "nodemon Server.js",
+    "cloc": "cloc --fullpath --exclude-dir=node_modules --not-match-f=\"(node_modules|/views/require.js|package-lock.json)\" .",
+    "devNodemonScss": "npm run dev & npm run scss"
+  },
+  "author": "Ken",
+  "license": "MIT",
+  "dependencies": {
+    "@line/bot-sdk": "^7.2.0",
+    "antd": "^4.15.1",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.25.1",
+    "console-read-write": "^0.1.1",
+    "cookie-parser": "^1.4.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "file-type": "^16.3.0",
+    "fs": "0.0.1-security",
+    "line-notify": "^1.0.0",
+    "line-notify-nodejs": "^1.0.0",
+    "nedb": "^1.8.0",
+    "node-fetch": "^2.6.1",
+    "node-sass": "^5.0.0",
+    "path": "^0.12.7",
+    "pg": "^8.5.1",
+    "psql": "0.0.1",
+    "request": "^2.88.2",
+    "sequelize": "^6.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
