@@ -11,8 +11,15 @@ function Home() {
     }, []);
 
     return (
-        <div className="Home">
+        <div className="h-screen justify-center">
+            <p>test</p>
             <p>{!data ? "Loading..." : data}</p>
+            <p>{!data ? "Loading..." : data}</p>
+            <p>{!data ? "Loading..." : data}</p>
+            <p>{!data ? "Loading..." : data}</p>
+            <p>{!data ? "Loading..." : data}</p>
+            <p>{!data ? "Loading..." : data}</p>
+            <p>If the text above this message is "Loading...", there is a problem communicating with the backend. If not. Everything's good. Have a good day!</p>
         </div>
     );
 }
