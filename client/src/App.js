@@ -19,9 +19,11 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <div className="content">
+      {/* <div hidden={false} className="content bg-red-500 md:bg-yellow-500 lg:bg-yellow-100 xl:bg-green-200 2xl:bg-green-600"> */}
+        <div hidden={false} className="content">
         <Home />
       </div>
+      {/* <div hidden={true} className="content bg-red-500 md:bg-yellow-500 lg:bg-yellow-100 xl:bg-green-200 2xl:bg-green-600"></div> */}
     </div>
   );
 }

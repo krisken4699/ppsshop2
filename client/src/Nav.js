@@ -29,7 +29,7 @@ function Navbar() {
               <div className="a col-start-3 col-span-1 flex"><a className="self-center text-center w-full link" href="#3">Page 3</a></div>
               <div className="a col-start-4 col-span-1 flex"><a className="self-center text-center w-full link" href="#4">Page 4</a></div>
               <div className="col-start-11 col-end-12 flex">
-                <button className="focus:outline-none text-white bg-F9C74F focus:ring rounded-xl text-xs py-2 px-4 self-center Poppins mr-2">Sign up</button>
+                <button className="focus:outline-none text-black bg-F9C74F focus:ring rounded-xl text-xs py-2 px-4 self-center Poppins mr-2">Sign up</button>
                 <button className="focus:outline-none text-gray-450 border-gray-350 border focus:ring rounded-xl text-xs py-2 px-4 self-center Poppins">Sign in</button>
               </div>
             </div>
