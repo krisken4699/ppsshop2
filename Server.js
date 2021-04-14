@@ -59,7 +59,7 @@ cloudinary.config({
 //variables
 const DevIP = ['192.168.56.1', '192.168.43.168', '172.20.10.4', '192.168.1.29'];
 const LineNotifyToken = 'j36WDOe3I0JXynCNeYmsFbEXodAK9jxRdh8QWKiMflo';
-const publicPath = path.join(__dirname, 'client', 'public');
+// const publicPath = path.join(__dirname, 'client', 'build');
 
 //Clear added IPs
 require('dns').lookup(require('os').hostname(), function (err, add, fam) {
@@ -68,7 +68,7 @@ require('dns').lookup(require('os').hostname(), function (err, add, fam) {
             console.log("Cleared IP.db");
         });
 })
-app.use(express.static(publicPath));
+app.use(express.static('client/build'));
 //Program
 try {
     //middle ware
@@ -83,9 +83,6 @@ try {
     //gets and posts
     app.get("/api", (req, res) => {
         res.json({ message: "Hello from server!" });
-    });
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(publicPath, 'index.html'));
     });
     app.use(function (req, res) {
         res.status(404).render(path.join(__dirname, './views/Error.ejs'), { status: 404 });
