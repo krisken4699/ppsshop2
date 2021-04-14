@@ -16,7 +16,7 @@ function Navbar() {
   }
   $('#dropdown-menu').hide();
   return (
-    <div className="Navbar">
+    <div className="Navbar fixed">
       <Nav className="z-50 transform -translate-x-1/2 left-1/2 navbar px-10 py-4 bg-F7F5F2 hover:shadow-md">
         <div>
           <div className="grid grid-cols-11 gap-x-0">
