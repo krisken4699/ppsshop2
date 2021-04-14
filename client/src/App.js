@@ -4,7 +4,9 @@ import "./App.css";
 
 function App() {
   const [data, setData] = React.useState(null);
-
+  if (window.location.protocol === 'http')
+    window.location.protocol = 'https';
+  console.log('Start');
   React.useEffect(() => {
     fetch("/api")
       .then((res) => res.json())

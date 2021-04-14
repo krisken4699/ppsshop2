@@ -32,7 +32,7 @@ app.set('view-engine', 'html');
 app.engine('html', require('ejs').renderFile);
 // app.set('trust proxy', true);
 app.set('trust proxy', function (ip) {
-    console.log(`${IP}` + ip);
+    // console.log(`${IP}` + ip);
     return true;
 });
 app.use(function (req, res, next) {
@@ -73,11 +73,13 @@ app.use(express.static('client/build'));
 try {
     //middle ware
     app.get("*", function (req, res, next) {
-        // console.log('someone joined');
+        req.fullURL = req.protocol + '://' + req.get('host') + req.originalUrl;
         if (req.cookies.token == undefined) {
             res.clearCookie('token');
             res.cookie('token', Date.now())
         }
+        // if(req.protocol == 'http')
+        //     res.redirect(`https://${req.get('host')}${req.originalUrl}`)
         next();
     })
     //gets and posts
