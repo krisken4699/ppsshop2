@@ -6,7 +6,7 @@ function App() {
   const [data, setData] = React.useState(null);
   if (window.location.protocol === 'http')
     window.location.protocol = 'https';
-  console.log('Start');
+  console.log(window.location.protocol);
   React.useEffect(() => {
     fetch("/api")
       .then((res) => res.json())
