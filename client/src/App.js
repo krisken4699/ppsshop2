@@ -21,7 +21,7 @@ function App() {
       {/* <div class="divide-y-4 divide-yellow-600 divide-dashed"> */}
       <Navbar className="z-50" />
       {/* <div hidden={false} className="content bg-red-500 md:bg-yellow-500 lg:bg-yellow-100 xl:bg-green-200 2xl:bg-green-600"> */}
-      <div hidden={false} className="z-10 content relative mt-6">
+      <div hidden={false} className="z-10 content relative">
         <Home />
       </div>
       {/* </div> */}

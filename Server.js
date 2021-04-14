@@ -16,7 +16,6 @@ const Datastore = require('nedb');
 const fileupload = require('express-fileupload');
 const fs = require('fs');
 const cookieParser = require('cookie-parser');
-const DatabaseSQL = require('./BackUp.js');
 const readline = require('console-read-write');
 const bodyParser = require('body-parser');
 const Security = require('./KenEncryptionAndDecryptionLibrary.js'); //other included files
@@ -54,6 +53,12 @@ cloudinary.config({
     api_key: '311547878546917',
     api_secret: 'TLpPvAEAXbAnPnN9Thu-5-uyBRs'
 });
+
+const mongodbCreds = {
+    username: 'invent60',
+    password: 'TBvi67lc9XcLHTLk'
+}
+
 //SetUp Misc
 
 //variables
