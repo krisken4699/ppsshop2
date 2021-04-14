@@ -51,10 +51,10 @@ function Navbar() {
             {/* rounded-md ring-1 shadow-lg ring-black ring-opacity-5 */}
             <div id="dropdown-menu" className="lg:hidden block origin-top-right right-0 mt-2 w-56 bg-F7F5F2 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
               <div className="py-1" role="none">
-                <a onClick={dropdown} href="#1" className="block px-4 py-2 text-sm text-gray-700 bg-gradient-to-r hover:from-gray-200 hover:to-transparent hover:text-gray-900 hover:border-l-4 border-yellow-300" role="menuitem">Home</a>
-                <a onClick={dropdown} href="#2" className="block px-4 py-2 text-sm text-gray-700 bg-gradient-to-r hover:from-gray-200 hover:to-transparent hover:text-gray-900 hover:border-l-4 border-yellow-300" role="menuitem">Chat</a>
-                <a onClick={dropdown} href="#3" className="block px-4 py-2 text-sm text-gray-700 bg-gradient-to-r hover:from-gray-200 hover:to-transparent hover:text-gray-900 hover:border-l-4 border-yellow-300" role="menuitem">License</a>
-                <a onClick={dropdown} href="#4" className="block px-4 py-2 text-sm text-gray-700 bg-gradient-to-r hover:from-gray-200 hover:to-transparent hover:text-gray-900 hover:border-l-4 border-yellow-300" role="menuitem">Something else</a>
+                <a onClick={dropdown} href="#1" className="block px-4 py-2 text-sm text-gray-700 bg-gradient-to-r hover:from-gray-100 hover:to-transparent hover:text-gray-900 hover:border-l-4 border-yellow-300" role="menuitem">Home</a>
+                <a onClick={dropdown} href="#2" className="block px-4 py-2 text-sm text-gray-700 bg-gradient-to-r hover:from-gray-100 hover:to-transparent hover:text-gray-900 hover:border-l-4 border-yellow-300" role="menuitem">Chat</a>
+                <a onClick={dropdown} href="#3" className="block px-4 py-2 text-sm text-gray-700 bg-gradient-to-r hover:from-gray-100 hover:to-transparent hover:text-gray-900 hover:border-l-4 border-yellow-300" role="menuitem">License</a>
+                <a onClick={dropdown} href="#4" className="block px-4 py-2 text-sm text-gray-700 bg-gradient-to-r hover:from-gray-100 hover:to-transparent hover:text-gray-900 hover:border-l-4 border-yellow-300" role="menuitem">Something else</a>
               </div>
             </div>
 
