@@ -70,6 +70,8 @@ module.exports = {
         },
         'F9C74F': '#F9C74F',
         'F7F5F2': '#F7F5F2',
+        '666666': '#666666',
+        'DDDDDD': '#DDDDDD',
         'EDF4FD': '#EDF4FD',
         '113D8B': '#113D8B',
         'D9D9D9': '#D9D9D9',

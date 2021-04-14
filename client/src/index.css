@@ -53,9 +53,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media only screen and (max-width: 1024px) {
-  #dropdown-menu {
-    display: none;
-  }
 
   .nav-collapse {
     display: none;
@@ -67,10 +64,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (min-width: 1023px) {
-  #dropdown-menu {
-    display: none;
-  }
-
   p,
   ul,
   ol,

@@ -75,7 +75,6 @@ const Title = styled.h1`
 `;
 
 const Nav = styled.nav`
-  transition:0.5s;
   display: block;
   position:fixed;
   margin-left: auto;
