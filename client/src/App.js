@@ -1,12 +1,15 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Navbar from './Nav.js';
+import Home from './Home.js';
+
 
 function App() {
   const [data, setData] = React.useState(null);
-  if (window.location.protocol === 'http:')
+  if (window.location.protocol === 'http:' && window.location.href.substr(0, 21) != 'http://localhost:3000')
     window.location.protocol = 'https:';
-  console.log(window.location.protocol);
+
   React.useEffect(() => {
     fetch("/api")
       .then((res) => res.json())
@@ -15,10 +18,10 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{!data ? "Loading..." : data}</p>
-      </header>
+      <Navbar />
+      <div className="content">
+        <Home />
+      </div>
     </div>
   );
 }
