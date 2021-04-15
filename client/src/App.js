@@ -10,12 +10,6 @@ function App() {
   if (window.location.protocol === 'http:' && window.location.href.substr(0, 21) != 'http://localhost:3000')
     window.location.protocol = 'https:';
 
-  React.useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
-
   return (
     <div className="App">
       {/* <div class="divide-y-4 divide-yellow-600 divide-dashed"> */}

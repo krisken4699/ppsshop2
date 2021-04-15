@@ -60,6 +60,18 @@ const mongodbCreds = {
 }
 
 //SetUp Misc
+Categories = [
+    'ที่พัก',
+    'อาหาร',
+    'การเดินทาง',
+    'กิจกรรม',
+    'อื่นๆ',
+];
+for(i = 0; i < Categories.length; i++)
+{
+    Categories[i] = (i+1) + Categories[i]
+    // Categories[i] =  Categories[i]
+}
 
 //variables
 const DevIP = ['192.168.56.1', '192.168.43.168', '172.20.10.4', '192.168.1.29'];
@@ -90,6 +102,11 @@ try {
     //gets and posts
     app.get("/api", (req, res) => {
         res.json({ message: "Hello from server!" });
+    });
+    app.get("/api/category", (req, res) => {
+        res.json({
+            message: Categories
+        });
     });
     app.use(function (req, res) {
         res.status(404).render(path.join(__dirname, './views/Error.ejs'), { status: 404 });
