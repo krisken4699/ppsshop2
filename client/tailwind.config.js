@@ -82,6 +82,7 @@ module.exports = {
   },
   variants: {
     extend: {
+      cursor: ['hover', 'focus'],
       borderWidth: ['hover', 'focus', 'responsive'],
       gradientColorStops: ['active', 'group-hover', 'hover'],
     },
