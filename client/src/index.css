@@ -42,7 +42,8 @@ body::-webkit-scrollbar-thumb {
   p,
   ul,
   ol,
-  li, .a {
+  li,
+  .a {
     font-family: "Gilroy";
     font-size: 0.8em;
     font-style: normal;
@@ -64,6 +65,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (min-width: 1023px) {
+
   p,
   ul,
   ol,
@@ -196,7 +198,7 @@ button:focus {
   }
 }
 
-* { 
+* {
   outline: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;

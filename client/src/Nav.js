@@ -23,10 +23,10 @@ function Navbar() {
               <Title>PANGCU</Title>
             </div>
             <div className="nav-collapse hidden lg:col-start-3 col-span-10 lg:grid grid-cols-7 gap-0 content-center text-center">
-              <div className="a col-start-1 col-span-1 flex"><a className="self-center text-center w-full link" href="#1">Home</a></div>
-              <div className="a col-start-2 col-span-1 flex"><a className="self-center text-center w-full link" href="#2">Chat</a></div>
-              <div className="a col-start-3 col-span-1 flex"><a className="self-center text-center w-full link" href="#3">Page 3</a></div>
-              <div className="a col-start-4 col-span-1 flex"><a className="self-center text-center w-full link" href="#4">Page 4</a></div>
+              <div className="a col-start-1 col-span-1 flex"><a className="self-center text-center px-3 link" href="#1">Home</a></div>
+              <div className="a col-start-2 col-span-1 flex"><a className="self-center text-center px-3 link" href="#2">Chat</a></div>
+              <div className="a col-start-3 col-span-1 flex"><a className="self-center text-center px-3 link" href="#3">Page 3</a></div>
+              <div className="a col-start-4 col-span-1 flex"><a className="self-center text-center px-3 link" href="#4">Page 4</a></div>
               <div className="col-start-11 col-end-12 flex">
                 <button className="focus:outline-none text-black bg-F9C74F focus:ring rounded-xl text-xs py-2 px-4 self-center Poppins mr-2">Sign up</button>
                 <button className="focus:outline-none text-gray-450 border-gray-350 border focus:ring rounded-xl text-xs py-2 px-4 self-center Poppins">Sign in</button>
