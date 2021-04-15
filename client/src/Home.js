@@ -14,9 +14,9 @@ function Home() {
         <div className="h-screen pt-20">
             <div className="h-full grid grid-rows-5 grid-cols-6 w-full gap-6">
                 <div className="col-start-1 col-end-7 flex justify-center px-4">
-                    <div className="grid grid-cols-3 gap-6 md:w-50vw w-full ">
-                    <input type="text" className="col-start-2 rounded-md inline h-10 self-center w-full bg-DDDDDD p-3 placeholder-666666 Poppins font-semibold tracking-tight" placeholder="SEARCH" name="" id=""/>
-                    <button className="col-start-3 h-10 self-center w-min inline focus:outline-none text-black bg-F9C74F rounded-md p-3 Poppins font-semibold tracking-tight">Search</button>
+                    <div className="grid grid-cols-3 gap-6 xl:w-50vw w-full">
+                    <input type="text" className="focus:bg-white focus:ring-4 ring-gray-300 col-start-2 rounded-md inline md:text-left text-center h-10 self-center w-full bg-DDDDDD p-3 placeholder-666666 Poppins font-semibold tracking-tight" placeholder="SEARCH" name="" id=""/>
+                    <button className="col-start-3 h-10 self-center w-min inline focus:outline-none text-black bg-F9C74F rounded-md p-3 Poppins font-semibold tracking-tight leading-none">Search</button>
                     </div>
                 </div>
             </div>
