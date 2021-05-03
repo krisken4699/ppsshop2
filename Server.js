@@ -61,11 +61,11 @@ const mongodbCreds = {
 
 //SetUp Misc
 Categories = [
-    'ที่พัก',
-    'อาหาร',
-    'การเดินทาง',
-    'กิจกรรม',
-    'อื่นๆ',
+    JSON.stringify({Name:'ที่พัก', Image:'https://res.cloudinary.com/pangcu-herokuapp-com/image/upload/v1619846697/Home/Category/%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9E%E0%B8%B1%E0%B8%81.svg'}),
+    JSON.stringify({Name:'อาหาร', Image:'https://res.cloudinary.com/pangcu-herokuapp-com/image/upload/v1619846697/Home/Category/%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3.svg'}),
+    JSON.stringify({Name:'การเดินทาง', Image:'https://res.cloudinary.com/pangcu-herokuapp-com/image/upload/v1619846697/Home/Category/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%94%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%B2%E0%B8%87.svg'}),
+    JSON.stringify({Name:'กิจกรรม', Image:'https://res.cloudinary.com/pangcu-herokuapp-com/image/upload/v1619846697/Home/Category/%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1.svg'}),
+    JSON.stringify({Name:'อื่นๆ', Image:'https://res.cloudinary.com/pangcu-herokuapp-com/image/upload/v1619846697/Home/Category/%E0%B8%AD%E0%B8%B7%E0%B9%88%E0%B8%99%E0%B9%86.svg'}),
 ];
 for(i = 0; i < Categories.length; i++)
 {
@@ -101,15 +101,21 @@ try {
     })
     //gets and posts
     app.get("/api", (req, res) => {
-        res.json({ message: "Hello from server!" });
+        res.status(200).json({ message: [
+            {name:"1", image:"https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg"},
+            {name:"2", image:"https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg"},
+            {name:"3", image:"https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg"},
+            {name:"4", image:"https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg"},
+        ] });
     });
     app.get("/api/category", (req, res) => {
-        res.json({
-            message: Categories
+        res.status(200).json({
+            message: (Categories)
         });
     });
     app.use(function (req, res) {
-        res.status(404).render(path.join(__dirname, './views/Error.ejs'), { status: 404 });
+        console.log('Cannot find ', req.url)
+        res.status(404);
     });
 
     app.listen(app.get('port'), function () {
