@@ -11,8 +11,8 @@ const express = require('express');
 const crypto = require('crypto');
 const line = require('./line.js');
 const path = require("path");
+const cors = require("cors");
 const cloudinary = require("cloudinary").v2;
-const Datastore = require('nedb');
 const fileupload = require('express-fileupload');
 const fs = require('fs');
 const cookieParser = require('cookie-parser');
@@ -26,9 +26,6 @@ const app = express();
 
 //set up
 app.set('port', (process.env.PORT || 3001))
-app.set('view-engine', 'ejs');
-app.set('view-engine', 'html');
-app.engine('html', require('ejs').renderFile);
 // app.set('trust proxy', true);
 app.set('trust proxy', function (ip) {
     // console.log(`${IP}` + ip);
@@ -75,7 +72,6 @@ for(i = 0; i < Categories.length; i++)
 
 //variables
 const DevIP = ['192.168.56.1', '192.168.43.168', '172.20.10.4', '192.168.1.29'];
-const LineNotifyToken = 'j36WDOe3I0JXynCNeYmsFbEXodAK9jxRdh8QWKiMflo';
 // const publicPath = path.join(__dirname, 'client', 'build');
 
 //Clear added IPs
@@ -85,7 +81,8 @@ require('dns').lookup(require('os').hostname(), function (err, add, fam) {
             console.log("Cleared IP.db");
         });
 })
-app.use(express.static('client/build'));
+// app.use(cors({origin:'localhost:8000'}));
+app.use(express.static('./gatsby-client/public'));
 //Program
 try {
     //middle ware

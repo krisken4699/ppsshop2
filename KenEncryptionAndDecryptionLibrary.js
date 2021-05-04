@@ -1,9 +1,6 @@
 const crypto = require('crypto');
 const Security = require('./KenEncryptionAndDecryptionLibrary.js')
-const Datastore = require('nedb');
-const IP = new Datastore({ filename: 'IP.db' });
 const fs = require('fs');
-const user = new Datastore({ filename: 'Users.db' });
 const FileType = require('file-type');
 
 console.log("Load Ken Security Encryption")
