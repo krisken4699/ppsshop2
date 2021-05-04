@@ -10,7 +10,7 @@
   "scripts": {
     "heroku-postbuild": "npm run install-client && npm run build",
     "cancel-build": "heroku builds:cancel -a pancu && heroku restart -a pangcu",
-    "install-client": "cd gatsby-client && npm install",
+    "install-client": "cd ./gatsby-client/ && npm run build",
     "build": "cd gatsby-client && npm run build",
     "deploy": "start deploy.cmd",
     "test": "node Server.js",
