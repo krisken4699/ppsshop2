@@ -1,7 +1,7 @@
 try {
     const lineAPI = require('@line/bot-sdk');
     const bodyParser = require('body-parser');
-    const fetch = require('node-fetch');
+    // const fetch = require('node-fetch');
     const request = require('request');
     const fs = require('fs');
 
