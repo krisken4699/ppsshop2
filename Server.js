@@ -97,7 +97,7 @@ try {
         next();
     })
     //gets and posts
-    app.get("/api", (req, res) => {
+    app.get("/api/content", (req, res) => {
         res.status(200).json({ message: [
             {name:"1adfs", image:"https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg"},
             {name:"2", image:"https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg"},

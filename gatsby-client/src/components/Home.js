@@ -7,7 +7,7 @@ function Home() {
     // const [CategoriesIcon, setCategoriesIcon] = useState("https://res.cloudinary.com/pangcu-herokuapp-com/image/upload/v1619846697/Home/Category/None.svg");
     useEffect(() => {
         console.log('test');
-        fetch("http://localhost:3001/api")
+        fetch("http://localhost:3001/api/content")
             .then((res) => res.json())
             .then((data) => {
                 console.log(data.message)
