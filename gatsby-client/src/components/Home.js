@@ -45,10 +45,10 @@ function Home() {
                         <button className="col-start-3 h-10 self-center w-min inline focus:outline-none text-black active:bg-yellow-300 bg-F9C74F rounded-md p-3 Poppins font-semibold tracking-tight leading-none">Search</button>
                     </div>
                 </div>
-                <div ref={cards} className="col-start-1 row-start-2 gap-6 grid grid-cols-6 row-end-6 col-end-7 grid-rows-2">
+                <div ref={cards} className="px-7 col-start-1 row-start-2 gap-6 grid grid-cols-6 row-end-6 col-end-7 grid-rows-2">
                     {data.map((card) => {
                         return (
-                            <div key={card.key} className={`p-4 col-start-${1 + (card.key % 6)} col-span-1`}>
+                            <div key={card.key} className={`p-1 col-start-${1 + (card.key % 6)} col-span-1`}>
                                 <div className="bg-C4C4C4 rounded-xl w-full h-full">
                                 {card.name}
                                 </div>
