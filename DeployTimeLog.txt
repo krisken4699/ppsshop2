@@ -1,14 +1,14 @@
-Microsoft Windows [Version 10.0.19042.928]
-(c) Microsoft Corporation. All rights reserved.
+Days              : 0
+Hours             : 0
+Minutes           : 1
+Seconds           : 4
+Milliseconds      : 74
+Ticks             : 640745420
+TotalDays         : 0.00074160349537037
+TotalHours        : 0.0177984838888889
+TotalMinutes      : 1.06790903333333
+TotalSeconds      : 64.074542
+TotalMilliseconds : 64074.542
 
-C:\Users\Advice\Desktop\Pangcu>
 
-C:\Users\Advice\Desktop\Pangcu>
 
-C:\Users\Advice\Desktop\Pangcu>
-C:\Users\Advice\Desktop\Pangcu>C:\Users\Advice\Desktop\Pangcu>C:\Users\Advice\Desktop\Pangcu>C:\Users\Advice\Desktop\Pangcu>
-C:\Users\Advice\Desktop\Pangcu>C:\Users\Advice\Desktop\Pangcu>
-C:\Users\Advice\Desktop\Pangcu>
-C:\Users\Advice\Desktop\Pangcu>
-C:\Users\Advice\Desktop\Pangcu>
-C:\Users\Advice\Desktop\Pangcu>
