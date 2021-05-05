@@ -12,7 +12,7 @@
     "cancel-build": "heroku builds:cancel -a pancu && heroku restart -a pangcu",
     "build": "cd gatsby-client && npm run build",
     "deploy-no-log": "npm install && cd ./gatsby-client/ && npm install && npm run clean && npm run build && cd .. && git add . && git commit -am \"this is an automated deploy.\" && git push origin main -f",
-    "deploy": "powershell Measure-Command { npm run deploy-no-log } >> ./DeployTimeLog.txt",
+    "deploy": "powershell ( Measure-Command { npm run deploy-no-log } >> ./DeployTimeLog.txt )",
     "test": "node Server.js",
     "start": "node Server.js",
     "scss": "node-sass --watch views/style/sass/style.scss -o views/style/css/",
