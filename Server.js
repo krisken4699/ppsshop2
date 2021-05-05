@@ -99,7 +99,7 @@ try {
     //gets and posts
     app.get("/api", (req, res) => {
         res.status(200).json({ message: [
-            {name:"1", image:"https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg"},
+            {name:"1adfs", image:"https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg"},
             {name:"2", image:"https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg"},
             {name:"3", image:"https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg"},
             {name:"4", image:"https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg"},
