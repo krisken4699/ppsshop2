@@ -39,7 +39,8 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "npm install && gatsby build",
+    "deploy": "npm run build && git add . && git commit -am \"This is an automated comit\" && git push origin main -f",
+    "build": "npm install && npm run clean && gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
