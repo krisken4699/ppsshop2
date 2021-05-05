@@ -11,7 +11,7 @@
     "heroku-postbuild": "npm install && cd ./gatsby-client && npm install",
     "cancel-build": "heroku builds:cancel -a pancu && heroku restart -a pangcu",
     "build": "cd gatsby-client && npm run build",
-    "deploy": "npm run build && git add . && git commit -am \"This is an automated comit\" && git push origin main -f",
+    "deploy": "npm install && cd ./gatsby-client/ && npm install && npm run build && cd .. && git add . && git commit -am \"this is an automated deploy.\" && git push origin main -f",
     "test": "node Server.js",
     "start": "node Server.js",
     "scss": "node-sass --watch views/style/sass/style.scss -o views/style/css/",
