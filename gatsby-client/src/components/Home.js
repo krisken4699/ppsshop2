@@ -1,12 +1,16 @@
 import React, { useRef, useState, useEffect } from "react";
 import Select_category from "./Select_category.js";
+// import { mongodb } from 'mongodb';
 
 function Home() {
     const [data, setData] = useState([]);
     const cards = useRef(null);
     // const [CategoriesIcon, setCategoriesIcon] = useState("https://res.cloudinary.com/pangcu-herokuapp-com/image/upload/v1619846697/Home/Category/None.svg");
+    // let MongoClient = mongodb.MongoClient;
+
     useEffect(() => {
         console.log('test');
+        // console.log(client);
         fetch("/api/content")
             .then((res) => res.json())
             .then((data) => {
@@ -45,12 +49,22 @@ function Home() {
                         <button className="col-start-3 h-10 self-center w-min inline focus:outline-none text-black active:bg-yellow-300 bg-F9C74F rounded-md p-3 Poppins font-semibold tracking-tight leading-none">Search</button>
                     </div>
                 </div>
-                <div ref={cards} className="px-7 col-start-1 row-start-2 gap-6 grid grid-cols-6 row-end-6 col-end-7 grid-rows-2">
+
+                <div ref={cards} className="w-200vw px-20 col-start-1 row-start-2 gap-x-20 gap-y-6 grid grid-cols-8 row-end-6 col-end-7 grid-rows-2 grid-flow-col pb-4">
                     {data.map((card) => {
                         return (
-                            <div key={card.key} className={`p-1 col-start-${1 + (card.key % 6)} col-span-1`}>
-                                <div className="bg-C4C4C4 rounded-xl w-full h-full">
-                                {card.name}
+                            <div key={card.key} className={`p-1 col-start-${1 + (card.key % 8)}  col-span-1`}>
+
+                                <div className="bg-C4C4C4 rounded-xl w-full flex h-full p-0">
+                                    <div className="w-full p-2 min-h-20 self-end bg-F0F0F0 rounded-b-xl pb-4 h-auto">
+                                        <h1 className="text-xl">{card.name}</h1>
+                                        <p className="text-xs Taviraj">{(card.description.toString().length < 40) ? card.description : card.description.toString().substring(0, 40) + "..."}</p>
+                                        <div className="h-4 flex">
+                                            <div className="ml-auto flex">
+                                                <p className="text-lg link text-AA0000 leading-none">{card.price}</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         )
@@ -67,7 +81,7 @@ function Home() {
         <p>{!data ? "Loading..." : data}</p>
         <p>If the text above this message is "Loading...", there is a problem communicating with the backend. If not. Everything's good. Have a good day!</p>
         </div> */}
-        </div>
+        </div >
 
 
 

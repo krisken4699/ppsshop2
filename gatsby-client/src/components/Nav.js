@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import styled from 'styled-components';
 import React, { useRef, useState, useLayoutEffect } from "react"
 
@@ -33,10 +34,10 @@ function Navbar() {
             <Title>PANGCU</Title>
           </div>
           <div className="nav-collapse hidden lg:col-start-3 col-span-10 lg:grid grid-cols-7 gap-0 content-center text-center">
-            <div className="a col-start-1 col-span-1 flex"><a className="self-center text-center px-3 link" href="#1">Home</a></div>
-            <div className="a col-start-2 col-span-1 flex"><a className="self-center text-center px-3 link" href="#2">Chat</a></div>
-            <div className="a col-start-3 col-span-1 flex"><a className="self-center text-center px-3 link" href="#3">Page 3</a></div>
-            <div className="a col-start-4 col-span-1 flex"><a className="self-center text-center px-3 link" href="#4">Page 4</a></div>
+            <div className="a col-start-1 col-span-1 flex"><Link className="self-center text-center px-3 link" to="#1" href="#1">Home</Link></div>
+            <div className="a col-start-2 col-span-1 flex"><Link className="self-center text-center px-3 link" to="#2" href="#2">Chat</Link></div>
+            <div className="a col-start-3 col-span-1 flex"><Link className="self-center text-center px-3 link" to="#3" href="#3">Page 3</Link></div>
+            <div className="a col-start-4 col-span-1 flex"><Link className="self-center text-center px-3 link" to="#4" href="#4">Page 4</Link></div>
             <div className="col-start-11 col-end-12 flex">
               <button className="focus:outline-none text-black bg-F9C74F focus:ring rounded-xl text-xs py-2 px-4 self-center Poppins mr-2">Sign up</button>
               <button className="focus:outline-none text-gray-450 border-gray-350 border focus:ring rounded-xl text-xs py-2 px-4 self-center Poppins">Sign in</button>
@@ -60,10 +61,10 @@ function Navbar() {
           {/* rounded-md ring-1 shadow-lg ring-black ring-opacity-5 */}
           <div ref={dropdownRef} id="dropdown-menu" className="max-h-screen overflow-y-hidden lg:inline origin-top-right right-0 mt-2 w-56 focus:outline-nonew" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
             <div className="py-1" role="none">
-              <a onClick={toggleDropdown} href="#1" className="block px-4 py-2 text-sm text-gray-700 bg-gradient-to-r hover:from-gray-100 hover:to-transparent hover:text-gray-900 hover:border-l-4 border-yellow-300" role="menuitem">Home</a>
-              <a onClick={toggleDropdown} href="#2" className="block px-4 py-2 text-sm text-gray-700 bg-gradient-to-r hover:from-gray-100 hover:to-transparent hover:text-gray-900 hover:border-l-4 border-yellow-300" role="menuitem">Chat</a>
-              <a onClick={toggleDropdown} href="#3" className="block px-4 py-2 text-sm text-gray-700 bg-gradient-to-r hover:from-gray-100 hover:to-transparent hover:text-gray-900 hover:border-l-4 border-yellow-300" role="menuitem">License</a>
-              <a onClick={toggleDropdown} href="#4" className="block px-4 py-2 text-sm text-gray-700 bg-gradient-to-r hover:from-gray-100 hover:to-transparent hover:text-gray-900 hover:border-l-4 border-yellow-300" role="menuitem">Something else</a>
+              <Link to="#1" onClick={toggleDropdown} href="#1" className="block px-4 py-2 text-sm text-gray-700 bg-gradient-to-r hover:from-gray-100 hover:to-transparent hover:text-gray-900 hover:border-l-4 border-yellow-300" role="menuitem">Home</Link>
+              <Link to="#2" onClick={toggleDropdown} href="#2" className="block px-4 py-2 text-sm text-gray-700 bg-gradient-to-r hover:from-gray-100 hover:to-transparent hover:text-gray-900 hover:border-l-4 border-yellow-300" role="menuitem">Chat</Link>
+              <Link to="#3" onClick={toggleDropdown} href="#3" className="block px-4 py-2 text-sm text-gray-700 bg-gradient-to-r hover:from-gray-100 hover:to-transparent hover:text-gray-900 hover:border-l-4 border-yellow-300" role="menuitem">License</Link>
+              <Link to="#4" onClick={toggleDropdown} href="#4" className="block px-4 py-2 text-sm text-gray-700 bg-gradient-to-r hover:from-gray-100 hover:to-transparent hover:text-gray-900 hover:border-l-4 border-yellow-300" role="menuitem">Something else</Link>
             </div>
           </div>
 

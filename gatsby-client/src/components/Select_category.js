@@ -33,7 +33,7 @@ const Select_category = () => {
                 <input type="checkbox" id="options-view-button" />
                 <div id="select-button" className="brd ">
                     <div id="selected-value">
-                        <span ref={selectedValue}>All</span>
+                        <span ref={selectedValue}>Select Category</span>
                     </div>
                     <div id="chevrons">
                         <i aria-hidden className="fas fa-chevron-up"></i>
@@ -42,11 +42,11 @@ const Select_category = () => {
                 </div>
                 <div id="options">
                     <div className="option">
-                        <input data-image="https://res.cloudinary.com/pangcu-herokuapp-com/image/upload/v1619846697/Home/Category/None.svg" className="s-c top" type="radio" name="category-option" value="None" />
-                        <input data-image="https://res.cloudinary.com/pangcu-herokuapp-com/image/upload/v1619846697/Home/Category/None.svg" className="s-c bottom" type="radio" name="category-option" value="None" />
+                        <input data-image="https://res.cloudinary.com/pangcu-herokuapp-com/image/upload/v1619846697/Home/Category/None.svg" className="s-c top" type="radio" name="category-option" value="Select Category" />
+                        <input data-image="https://res.cloudinary.com/pangcu-herokuapp-com/image/upload/v1619846697/Home/Category/None.svg" className="s-c bottom" type="radio" name="category-option" value="Select Category" />
                         {/* <i aria-hidden className="fab fa-codepen"></i> */}
                         <img aria-hidden src="https://res.cloudinary.com/pangcu-herokuapp-com/image/upload/v1619846697/Home/Category/None.svg"/>
-                        <span className="label">All</span>
+                        <span className="label">No Filter</span>
                         {/* <span className="opt-val">CodePen</span> */}
                     </div>
                     {Categories.map((category) => {

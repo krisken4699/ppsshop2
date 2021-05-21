@@ -5,12 +5,12 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Home from '../components/Home.js';
 import Navbar from '../components/Nav.js';
-import Seo from "../components/seo"
-import '../styles/App.css'
+import Seo from "../components/seo";
+import '../styles/App.css';
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Home" />
+    <Seo title="Home" description="Description for home page. change at index.js:13" />
     {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>

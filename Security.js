@@ -1,5 +1,5 @@
 const crypto = require('crypto');
-const Security = require('./KenEncryptionAndDecryptionLibrary.js')
+const Security = require('./Security.js')
 const fs = require('fs');
 const FileType = require('file-type');
 
@@ -26,15 +26,36 @@ function Decrypt_aes256cbc(PasswordToDecrypt) {
     decrypted += decipher.final('utf-8');
     return decrypted;
 }
-// function String2Hex(tmp) {
-//     var hex;
-//     var result = "";
-//     for (i = 0; i < tmp.length; i++) {
-//         hex = tmp.charCodeAt(i).toString(16);
-//         result += ("000" + hex).slice(-4);
-//     }
-//     return result
-// }
+
+function randomBase64(length, chars) {
+    if (!chars) {
+      throw new Error('Argument \'chars\' is undefined');
+    }
+  
+    var charsLength = chars.length;
+    if (charsLength > 256) {
+      throw new Error('Argument \'chars\' should not have more than 256 characters'
+        + ', otherwise unpredictability will be broken');
+    }
+  
+    var randomBytes = crypto.randomBytes(length);
+    var result = new Array(length);
+  
+    var cursor = 0;
+    for (var i = 0; i < length; i++) {
+      cursor += randomBytes[i];
+      result[i] = chars[cursor % charsLength];
+    }
+  
+    return result.join('');
+  }
+  
+  /** Sync */
+  function randomAsciiString(length) {
+    return randomString(length,
+      'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789');
+  }
+
 function String2Hex(str) {
     return Array.from(str).map(c =>
         c.charCodeAt(0) < 128 ? c.charCodeAt(0).toString(16) :
@@ -49,7 +70,7 @@ function hex2a(hex) {
     }
     return str;
 }
-console.log(Encrypt_aes256cbc('lasttest'))
+// console.log(Encrypt_aes256cbc('lasttest'))
 
 function ipAuthenToUsername(req, IPdb, callback) {
     IPdb.loadDatabase((err) => {
@@ -185,5 +206,11 @@ module.exports.AuthenUser = function (req, callback) {
 }
 module.exports.GetContentType = function (filepath) {
     return GetContentType(filepath);
+}
+module.exports.GenerateKey = function () {
+    // return randomBase64(11, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/").replace(/\+/g, '-').replace(/\//g, '_').replace(/\=/g, '');
+    return randomBase64(11, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_").replace(/\+/g, '-').replace(/\//g, '_').replace(/\=/g, '');
+    //I fixed the length of the key to 11 because, the possibilities the ids to be generated from that has 73,786,976,294,838,206,464 outcomes. So don't worry about running out of them.
+    //That is enough for everyone on earth to create an ID every minute for around... 18,000 years. So lets chill.
 }
 // console.log(String2Hex("test\ntest"));
