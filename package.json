@@ -8,7 +8,7 @@
     "npm": "6.14.8"
   },
   "scripts": {
-    "heroku-postbuild": "\"npm install && cd ./gatsby-client && npm install\"",
+    "heroku-postbuild": "echo \"Starting\"",
     "cancel-build": "heroku builds:cancel -a pancu && heroku restart -a pangcu",
     "build": "cd gatsby-client && npm run build",
     "deploy-no-log": "npm install && cd ./gatsby-client/ && npm install && npm run clean && npm run build && cd .. && git add . && git commit -am \"this is an automated deploy.\" && git push origin main -f",
