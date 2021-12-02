@@ -1,6 +1,0 @@
-Transaction ID
-Total Price : ราคารวม
-Quantity: จำนวน
-Product : รายการ
-Check Out : 
-Your Basket : สินค้าในตระกร้า

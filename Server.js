@@ -9,7 +9,6 @@ console.log = function () {
 //Lib
 const express = require('express');
 const crypto = require('crypto');
-const line = require('./line.js');
 const path = require("path");
 const cors = require("cors");
 const cloudinary = require("cloudinary").v2;
@@ -21,7 +20,6 @@ const bodyParser = require('body-parser');
 const Security = require('./Security.js'); //other included files
 const FileType = require('file-type');
 const db = require('./MongoDB');
-const { resolveSoa } = require('dns');
 
 //Create App
 const app = express();
@@ -83,6 +81,7 @@ require('dns').lookup(require('os').hostname(), function (err, add, fam) {
         });
 })
 // app.use(cors({origin:'localhost:8000'}));
+app.use(express.static('./gatsby-client/public'));
 
 try {
     //middle ware
@@ -96,8 +95,6 @@ try {
         //     res.redirect(`https://${req.get('host')}${req.originalUrl}`)
         next();
     })
-
-    app.use(express.static('./PPSSHOP3/public/'));
 
     //gets and posts
     app.get("/api/content", (req, res) => {
@@ -127,10 +124,10 @@ try {
             message: (Categories)
         });
     });
-    // app.use(function (req, res) {
-    //     console.log('Cannot find ', req.url)
-    //     res.status(404);
-    // });
+    app.use(function (req, res) {
+        console.log('Cannot find ', req.url)
+        res.status(404);
+    });
 
     app.listen(app.get('port'), function () {
         // console.log("Running : 3001\n192.168.10.19:3001");
