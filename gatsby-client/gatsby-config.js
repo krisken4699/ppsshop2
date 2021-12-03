@@ -1,9 +1,5 @@
 module.exports = {
 
-  proxy: { 
-    prefix: "/api",
-    url: "http://localhost:3001",
-  },
   siteMetadata: {
     title: `Home`,
     description: `Buy coupons and vouchers now!`,
@@ -39,4 +35,9 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
+  proxy: { 
+    prefix: "/api",
+    url: "http://localhost:3001/",
+  },
+
 }

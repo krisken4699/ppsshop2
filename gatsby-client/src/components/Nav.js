@@ -20,15 +20,22 @@ function Navbar() {
     $(".burger").toggleClass('not-active');
     $(".burger").toggleClass('active');
   };
-  function signUp() {
-    // console.log('click')
+  function logout() {
     if (cookies.user) {
-      console.log('logout')
-      removeCookie('user');
+      fetch('/api/logout', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      })
+        .then(response => {
+          if (response.status === 200)
+            removeCookie('user');
+        })
     }
     else {
       console.log("signup")
-      setCookie('user', { name: "", password: "" }, { path: '/', expires: new Date(new Date().getTime() + 86400000) })
       anime({
         targets: "#darkScreen",
         opacity: {
@@ -44,6 +51,10 @@ function Navbar() {
         //   easing: 'easeOutElastic',
         //   value: ["+0","+=100","-=100"]
         // },
+        opacity: {
+          value: 1,
+          duration: 0
+        },
         translateX: {
           value: ['100%', '0%'],
           duration: 400,
@@ -82,9 +93,9 @@ function Navbar() {
             <div className="a col-start-3 col-span-1 flex"><Link getProps={isActive} className="self-center text-center px-3 link" to="#3" href="#3">Page 3</Link></div>
             <div className="a col-start-4 col-span-1 flex"><Link getProps={isActive} className="self-center text-center px-3 link" to="#4" href="#4">Page 4</Link></div>
             <div className="col-start-11 col-end-12 flex">
-              <a onClick={signUp} className="self-center text-center px-3 font-Metric-Medium tracking-1px text-xs cursor-pointer uppercase text-333 hover:text-A29F9A font-500">{cookies.user ? "Logout" : "Sign up"}</a>
+              <a onClick={logout} className="self-center text-center px-3 font-Metric-Medium tracking-1px text-xs cursor-pointer uppercase text-333 hover:text-A29F9A font-500">{cookies.user ? "Logout" : "Sign in"}</a>
               <a className="self-center text-center px-3 font-Metric-Medium tracking-1px text-xs uppercase text-333 hover:text-A29F9A font-500">{cookies.Items ? cookies.Items : "0"} in cart</a>
-              {/* <button className="focus:outline-none text-black bg-F9C74F focus:ring rounded-xl text-xs py-2 px-4 self-center Poppins mr-2">Sign up</button>
+              {/* <button className="focus:outline-none text-black bg-F9C74F focus:ring rounded-xl text-xs py-2 px-4 self-center Poppins mr-2">Sign in</button>
               <button className="focus:outline-none text-gray-450 border-gray-350 border focus:ring rounded-xl text-xs py-2 px-4 self-center Poppins">Sign in</button> */}
             </div>
           </div>
@@ -110,7 +121,7 @@ function Navbar() {
               <Link getProps={isActive} onClick={toggleDropdown} href="#2" className="link block px-4 py-2" role="menuitem" to="/page-2/">Chat</Link>
               <Link getProps={isActive} onClick={toggleDropdown} href="#3" className="link block px-4 py-2" role="menuitem" to="#3">License</Link>
               <Link getProps={isActive} onClick={toggleDropdown} href="#4" className="link block px-4 py-2" role="menuitem" to="#4">Something else</Link>
-              <a onClick={signUp} className="cursor-pointer self-center text-center py-2 px-4 font-Metric-Medium tracking-1px text-xs uppercase text-333 hover:text-A29F9A font-500">{cookies.user ? "Logout" : "Sign up"}</a>
+              <a onClick={logout} className="cursor-pointer self-center text-center py-2 px-4 font-Metric-Medium tracking-1px text-xs uppercase text-333 hover:text-A29F9A font-500">{cookies.user ? "Logout" : "Sign in"}</a>
               <a className="self-center text-center py-2 px-4 font-Metric-Medium tracking-1px text-xs uppercase text-333 hover:text-A29F9A font-500">{cookies.Items ? cookies.Items : "0"} in cart</a>
             </div>
           </div>

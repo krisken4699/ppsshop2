@@ -3,7 +3,6 @@ const Security = require('./Security.js')
 const fs = require('fs');
 const FileType = require('file-type');
 
-console.log("Load Ken Security Encryption")
 function LogAlgorithms() {
     console.log(crypto.getHashes())
     console.log(crypto.getCiphers())

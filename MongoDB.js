@@ -1,5 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
-const MONGODBURI = "mongodb+srv://invent60:TBvi67lc9XcLHTLk@pangcu.zwnvo.mongodb.net/Products?retryWrites=true&w=majority";
+const MONGODBURI = "mongodb+srv://Admin1:ppsshop@ppsshop2.v2jh7.mongodb.net/Products?retryWrites=true&w=majority";
 const client = new MongoClient(MONGODBURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 async function insertOne(json, database, collectionName) {
@@ -44,8 +44,4 @@ module.exports.insertOne = function (json, database, collectionName) {
   return insertOne(json, database, collectionName);
 }
 
-
-setInterval(() => {
-  console.log("test");
-}, 120000);
 // 120000 = 120 second * 1000ms

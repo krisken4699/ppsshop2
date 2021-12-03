@@ -80,7 +80,7 @@ require('dns').lookup(require('os').hostname(), function (err, add, fam) {
             console.log("Cleared IP.db");
         });
 })
-// app.use(cors({origin:'localhost:8000'}));
+app.use(cors({ origin: 'http://localhost:8000' }));
 app.use(express.static('./gatsby-client/public'));
 
 try {
@@ -96,34 +96,12 @@ try {
         next();
     })
 
-    //gets and posts
-    app.get("/api/content", (req, res) => {
-        res.status(200).json({
-            message: [
-                { name: "Item name 1", id: "bribZNKFb_N", image: "https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque dolores, quos veritatis nulla culpa maiores, quaerat voluptatem esse odio quas dolore laborum ratione eos officia aliquam labore, nostrum in?", sellerID: "sellerID 1", price: 0, category: [] },
-                { name: "Item name 1", id: "CtLHn_5Y6ER", image: "https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque dolores, quos veritatis nulla culpa maiores, quaerat voluptatem esse odio quas dolore laborum ratione eos officia aliquam labore, nostrum in?", sellerID: "sellerID 2", price: 0, category: [] },
-                { name: "Item name 1", id: "LR7Qrv_mDU7", image: "https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque dolores, quos veritatis nulla culpa maiores, quaerat voluptatem esse odio quas dolore laborum ratione eos officia aliquam labore, nostrum in?", sellerID: "sellerID 3", price: 0, category: [] },
-                { name: "Item name 1", id: "pqT4qsXZTT_", image: "https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque dolores, quos veritatis nulla culpa maiores, quaerat voluptatem esse odio quas dolore laborum ratione eos officia aliquam labore, nostrum in?", sellerID: "sellerID 4", price: 0, category: [] },
-                { name: "Item name 1", id: "9jv_CRdPEGi", image: "https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque dolores, quos veritatis nulla culpa maiores, quaerat voluptatem esse odio quas dolore laborum ratione eos officia aliquam labore, nostrum in?", sellerID: "sellerID 1", price: 0, category: [] },
-                { name: "Item name 1", id: "PFCVdKnnAx4", image: "https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque dolores, quos veritatis nulla culpa maiores, quaerat voluptatem esse odio quas dolore laborum ratione eos officia aliquam labore, nostrum in?", sellerID: "sellerID 2", price: 0, category: [] },
-                { name: "Item name 1", id: "krM3SJWi_ZA", image: "https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque dolores, quos veritatis nulla culpa maiores, quaerat voluptatem esse odio quas dolore laborum ratione eos officia aliquam labore, nostrum in?", sellerID: "sellerID 3", price: 0, category: [] },
-                { name: "Item name 1", id: "UwBZkHeRwzH", image: "https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque dolores, quos veritatis nulla culpa maiores, quaerat voluptatem esse odio quas dolore laborum ratione eos officia aliquam labore, nostrum in?", sellerID: "sellerID 4", price: 0, category: [] },
-                { name: "Item name 1", id: "Ptk0I9zugMG", image: "https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque dolores, quos veritatis nulla culpa maiores, quaerat voluptatem esse odio quas dolore laborum ratione eos officia aliquam labore, nostrum in?", sellerID: "sellerID 1", price: 0, category: [] },
-                { name: "Item name 1", id: "_HgK0XNc9wO", image: "https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque dolores, quos veritatis nulla culpa maiores, quaerat voluptatem esse odio quas dolore laborum ratione eos officia aliquam labore, nostrum in?", sellerID: "sellerID 2", price: 0, category: [] },
-                { name: "Item name 1", id: "K8dQ110R59D", image: "https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque dolores, quos veritatis nulla culpa maiores, quaerat voluptatem esse odio quas dolore laborum ratione eos officia aliquam labore, nostrum in?", sellerID: "sellerID 3", price: 0, category: [] },
-                { name: "Item name 1", id: "vBwdJnhp7tb", image: "https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque dolores, quos veritatis nulla culpa maiores, quaerat voluptatem esse odio quas dolore laborum ratione eos officia aliquam labore, nostrum in?", sellerID: "sellerID 4", price: 0, category: [] },
-                { name: "Item name 1", id: "JmNk3gZ6GqZ", image: "https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque dolores, quos veritatis nulla culpa maiores, quaerat voluptatem esse odio quas dolore laborum ratione eos officia aliquam labore, nostrum in?", sellerID: "sellerID 1", price: 0, category: [] },
-                { name: "Item name 1", id: "WlwJ3-C5YXf", image: "https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque dolores, quos veritatis nulla culpa maiores, quaerat voluptatem esse odio quas dolore laborum ratione eos officia aliquam labore, nostrum in?", sellerID: "sellerID 2", price: 0, category: [] },
-                { name: "Item name 1", id: "w7h8BGmXPRd", image: "https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque dolores, quos veritatis nulla culpa maiores, quaerat voluptatem esse odio quas dolore laborum ratione eos officia aliquam labore, nostrum in?", sellerID: "sellerID 3", price: 0, category: [] },
-                { name: "Item name 1", id: "613cFMTBGSf", image: "https://i.pinimg.com/originals/c6/5b/80/c65b8092e8dee33aa662feebeea792bf.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque dolores, quos veritatis nulla culpa maiores, quaerat voluptatem esse odio quas dolore laborum ratione eos officia aliquam labore, nostrum in?", sellerID: "sellerID 4", price: 0, category: [] },
-            ]
-        });
-    });
-    app.get("/api/category", (req, res) => {
-        res.status(200).json({
-            message: (Categories)
-        });
-    });
+    app.post('/api/logout', (req, res) => {
+        res.clearCookie('user').status(200).end();
+    })
+
+
+
     app.use(function (req, res) {
         console.log('Cannot find ', req.url)
         res.status(404);
@@ -132,7 +110,7 @@ try {
     app.listen(app.get('port'), function () {
         // console.log("Running : 3001\n192.168.10.19:3001");
         require('dns').lookup(require('os').hostname(), function (err, add, fam) {
-            console.log("Running : 3001\t\t\t\thttp://" + add + ":3001\t\t\thttps://pangcu.herokuapp.com");
+            console.log(err ? err : `http://${add}:3001`);
         })
     });
     process.on('uncaughtException', function (err) {
